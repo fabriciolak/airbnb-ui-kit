@@ -7,6 +7,7 @@ const meta: Meta<typeof Button> = {
   title: "Components/Button",
   component: Button,
   tags: ["autodocs"],
+
   argTypes: {
     children: {
       control: "text",
@@ -21,6 +22,12 @@ const meta: Meta<typeof Button> = {
     fullWidth: {
       control: "boolean",
       description: "Change button to a block level element",
+      defaultValue: false,
+      type: "boolean",
+    },
+    disabled: {
+      control: "boolean",
+      description: "Change button state",
       defaultValue: false,
       type: "boolean",
     },

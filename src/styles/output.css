@@ -580,6 +580,10 @@ video {
   background-color: hsla(0, 0%, 13%, 1);
 }
 
+.bg-error-02 {
+  background-color: hsla(11, 80%, 42%, 1);
+}
+
 .bg-gradient-radial-02 {
   background-image: radial-gradient(1413.54% 103.95% at -3.95% 100%, #D33753 0%, #D13660 52.83%, #C72D65 100%);
 }
@@ -622,4 +626,42 @@ video {
 
 .hover\:bg-gradient-radial-03:hover {
   background-image: radial-gradient(12158.65% 140.68% at 99.42% 0%, #C72D65 0%, #D23760 48.44%, #D23755 100%), radial-gradient(12158.65% 140.68% at 99.42% 0%, #C72D65 0%, #D23760 48.44%, #D23755 100%);
+}
+
+.focus\:outline-2:focus {
+  outline-width: 2px;
+}
+
+.focus\:outline-neutral-04:focus {
+  outline-color: hsla(0, 0%, 83%, 1);
+}
+
+.focus\:ring-2:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-shade-02:focus {
+  --tw-ring-color: hsla(0, 0%, 13%, 1);
+}
+
+.focus\:ring-offset-1:focus {
+  --tw-ring-offset-width: 1px;
+}
+
+.active\:bg-gradient-radial-01:active {
+  background-image: radial-gradient(12158.65% 140.68% at 99.42% 0%, #EB4C60 0%, #EB4C60 48.44%, #EB4C60 100%), radial-gradient(12158.65% 140.68% at 99.42% 0%, #C72D65 0%, #D23760 48.44%, #D23755 100%), radial-gradient(12158.65% 140.68% at 99.42% 0%, #C72D65 0%, #D23760 48.44%, #D23755 100%);
+}
+
+.disabled\:border-neutral-03:disabled {
+  border-color: hsla(0, 0%, 87%, 1);
+}
+
+.disabled\:bg-neutral-03:disabled {
+  background-color: hsla(0, 0%, 87%, 1);
+}
+
+.disabled\:text-shade-01:disabled {
+  color: hsla(0, 0%, 100%, 1);
 }
