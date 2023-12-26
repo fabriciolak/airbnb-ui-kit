@@ -3,25 +3,48 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "concurrently 'npm:dev:*'",
+    "dev:web": "next dev",
+    "dev:storybook": "storybook dev -p 6006",
+    "dev:tailwind": "tailwindcss -i ./src/styles/globals.css -o ./src/styles/output.css --watch",
+    "build:web": "next build",
+    "build:build-storybook": "storybook build",
+    "build:tailwind": "tailwindcss -i ./src/styles/globals.css -o ./src/styles/output.css",
+    "start:web": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "next": "13.5.6",
     "react": "^18",
     "react-dom": "^18",
-    "next": "13.5.6"
+    "tailwind-variants": "^0.1.19",
+    "tailwind-merge": "^2.2.0"
+
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@storybook/addon-essentials": "^7.6.6",
+    "@storybook/addon-interactions": "^7.6.6",
+    "@storybook/addon-links": "^7.6.6",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/blocks": "^7.6.6",
+    "@storybook/nextjs": "^7.6.6",
+    "@storybook/react": "^7.6.6",
+    "@storybook/test": "^7.6.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "autoprefixer": "^10",
-    "postcss": "^8",
-    "tailwindcss": "^3",
+    "autoprefixer": "^10.4.16",
+    "clsx": "^2.0.0",
+    "concurrently": "^8.2.2",
     "eslint": "^8",
-    "eslint-config-next": "13.5.6"
+    "eslint-config-next": "13.5.6",
+    "eslint-plugin-storybook": "^0.6.15",
+    "postcss": "^8.4.32",
+    "prettier": "^3.1.1",
+    "prettier-plugin-tailwindcss": "^0.5.9",
+    "storybook": "^7.6.6",
+    "tailwindcss": "^3.4.0",
+    "tsconfig-paths-webpack-plugin": "^4.1.0",
+    "typescript": "^5"
   }
 }
